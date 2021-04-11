@@ -1,3 +1,6 @@
+/**************mixin*****************/
+/**************mixin*****************/
+/**************font*****************/
 @font-face {
   font-family: "AnticDidone-Regular";
   src: url(../fonts/AnticDidone-Regular.ttf);
@@ -18,6 +21,7 @@
   src: url(../fonts/Nunito-Bold.ttf);
 }
 
+/**************font*****************/
 * {
   padding: 0;
   margin: 0;
@@ -30,12 +34,14 @@ html {
 }
 
 body {
-  background: #f5f5f5;
+  background: #000;
 }
 
+/**************estilos generales*****************/
 h1 {
   font-size: 60px;
   font-family: "AnticDidone-Regular";
+  color: #f5f5f5;
 }
 
 h2 {
@@ -50,6 +56,12 @@ h3 {
 h4 {
   font-size: 20px;
   font-family: "AnticDidone-Regular";
+}
+
+h5 {
+  font-size: 22px;
+  font-family: "Nunito-Regular";
+  color: #f7f7f7;
 }
 
 p {
@@ -72,11 +84,12 @@ ul li {
 .btn {
   padding: 10px 20px;
   color: #fff;
-  background-color: #1f1f1f;
-  border-color: #1f1f1f;
+  background-color: #d81159;
+  border-color: #d81159;
   border-radius: 0;
 }
 
+/**************menu principal*****************/
 /*nav*/
 .menuPrincipal {
   height: 65px;
@@ -93,13 +106,43 @@ ul li {
   width: 63px;
 }
 
-.menuPrincipal a {
+.menuPrincipal .item-perfil {
+  padding-top: 15px;
+}
+
+.menuPrincipal .menu a {
+  position: relative;
   color: #7D7D87;
   text-decoration: none;
+  margin: 0 20px;
+}
+
+.menuPrincipal .menu a::before {
+  content: '';
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  width: 100%;
+  height: 2px;
+  background: #d81159;
+  z-index: 1;
+  -webkit-transform: scaleX(0);
+          transform: scaleX(0);
+  -webkit-transform-origin: left;
+          transform-origin: left;
+  -webkit-transition: -webkit-transform 0.5s ease-in-out;
+  transition: -webkit-transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out;
+  transition: transform 0.5s ease-in-out, -webkit-transform 0.5s ease-in-out;
+}
+
+.menuPrincipal .menu a:hover::before {
+  -webkit-transform: scaleX(1);
+          transform: scaleX(1);
 }
 
 .menuPrincipal ul li {
-  padding-top: 10px;
+  padding-top: 15px;
   list-style: none;
 }
 
@@ -107,14 +150,11 @@ ul li {
   color: #fff;
 }
 
-.menuPrincipal .menu-perfil {
-  letter-spacing: 2px;
-}
-
 .menu-responsive {
   display: none;
 }
 
+/**************INICIO*****************/
 #inicio {
   height: 100vh;
   background-color: #000;
@@ -159,34 +199,57 @@ ul li {
   margin-right: 0.5rem;
 }
 
+/**************PERFIL*****************/
 #perfil {
-  background: #f5f5f5;
   padding: 8% 0 8% 0;
 }
 
 #perfil ul li a {
-  padding: 10px 20px;
+  margin-right: 20px;
   text-decoration: none;
-  color: #1f1f1f;
+  color: #ccc;
 }
 
-#perfil .d-flex {
+#perfil .flex-perfil {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
 }
 
-#perfil .flex-end {
-  margin-left: auto;
+#perfil .perfil-cont {
+  width: 35%;
+}
+
+#perfil .perfil-cont p {
+  color: #ccc;
+}
+
+#perfil figure {
+  background-image: url("../img/img-avatar.jpg");
+  background-size: cover;
+  height: 480px;
+}
+
+#perfil figure:hover {
+  background-image: url("../img/img-perfil.png");
+  -webkit-transition: opacity 1.5s ease-in-out;
+  transition: opacity 1.5s ease-in-out;
 }
 
 #perfil figure img {
   width: 100%;
 }
 
+/**************PROYECYOS*****************/
 #proyectos {
   background: #000;
   padding: 8% 0 8% 0;
+  /**************HOVER IMAGENES*****************/
 }
 
 #proyectos .flex-cont {
@@ -275,6 +338,39 @@ ul li {
   -o-transform: scale(1.2);
 }
 
+/**************DETALLE*****************/
+#detalle {
+  padding: 8% 0 8% 0;
+}
+
+#detalle .flex-detalle {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#detalle .detalle-cont {
+  width: 50%;
+}
+
+#detalle .detalle-cont:nth-child(2) {
+  width: 35%;
+}
+
+#detalle .detalle-cont img {
+  width: 100%;
+}
+
+#detalle .detalle-cont p {
+  color: #ccc;
+}
+
+/**************FOOTER*****************/
 footer {
   background: #141517;
   border-top: 1px solid #7D7D87;
@@ -290,19 +386,7 @@ footer p {
   font-size: 12px;
 }
 
-#detalle {
-  background: #f5f5f5;
-  padding: 8% 0 8% 0;
-}
-
-#detalle figure img {
-  width: 100%;
-}
-
-#detalle h5 {
-  font-size: 20px;
-}
-
+/*************RESPONSIVE*****************/
 @media (max-width: 768px) {
   .menuPrincipal {
     display: none;
@@ -388,8 +472,36 @@ footer p {
     font-size: 20px;
     line-height: 2em;
   }
+  #perfil .flex-perfil {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
   #perfil .perfil-cont {
-    height: 400px;
+    width: 100%;
+  }
+  #proyectos {
+    padding: 30% 0 8% 0;
+  }
+  #detalle {
+    padding: 30% 0 8% 0;
+    height: 100vh;
+  }
+  #detalle .flex-detalle {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #detalle .detalle-cont {
+    width: 100%;
+  }
+  #detalle .detalle-cont:nth-child(2) {
+    width: 100%;
+  }
+  footer {
+    position: relative;
   }
 }
 /*# sourceMappingURL=styles.css.map */
