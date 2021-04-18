@@ -5,9 +5,10 @@ $(document).ready(function () {
     if (id == 1) { //si es proyecto 1
         $("#img-proyecto").attr("src" , "img/1.png"); 
         $("#nombreProyecto").html("Ballet");
-        $("#nombreMateria").html("Fotografía");
+        $("#nombreMateria").html("Fotografía Digital");
         $("#descripcionProyecto").html("Sesion de fotos que realice en taller de fotografía inspirado en la vida de una niña apasionada por el ballet");
         $("#entrar").html("Entrar");
+        $('#entrar').attr('href', "ballet.html");
         
         //pongo el nombre 1
         //pongo la desc 1

@@ -60,14 +60,11 @@ h3{
     font-size: 26px;
 }
 h4{
-    font-size: 20px;
-    font-family: "AnticDidone-Regular";
+    font-size: 18px;
+    font-family: "Nunito-Regular";
+    color: #7D7D87;
 }
-h5{
-   font-size: 22px;
-   font-family: "Nunito-Regular";
-   color: #f7f7f7; 
-}
+
 p{
     font-size: 14px;
     font-family: "Nunito-Regular";
@@ -92,16 +89,16 @@ ul li{
         background-color: transparent;
         border: 1px solid #d81159;
         color: #d81159;
-        transition: 0.3s;
+        transition: 0.5s;
     }
     &:focus{
-        outline: none;
+        outline: none!important;
     }
 }
 /**************menu principal*****************/
 /*nav*/
 .menuPrincipal{
-    height: 65px;
+    height: 60px;
     background: #141517;
     display: block;
     overflow: hidden;
@@ -305,9 +302,9 @@ ul li{
             -moz-transform:scale(1.2); // Firefox 
             -webkit-transform:scale(1.2); // Safari and Chrome 
             -o-transform:scale(1.2); // Opera
-        }
-    } 
-}
+            }
+        } 
+    }
 }
 
 /**************DETALLE*****************/
@@ -348,6 +345,200 @@ footer{
     }
 }
 
+/*************FOTOGRAFIA*****************/
+
+@mixin aspect-ratio($width, $height) {
+    position: relative;
+      
+    &:before {
+      display: block;
+      content: "";
+      width: 100%;
+      padding-top: ($height / $width) * 100%;
+    }
+      
+    > img {
+          position: absolute;
+          top: 0;
+          left: 0;
+          right: 0;
+          bottom: 0;
+          width: 100%;
+          height: 100%;
+    }
+  }
+  
+  // Styling
+#fotografia{
+    @include paddingDesk;
+    .galeria{
+        max-width: 1044px;
+        margin: 0 auto;
+        padding: 0 15px;
+    }
+    
+    .carousel {
+        display: block;
+        text-align: left;
+        position: relative;
+        margin-bottom: 22px;
+        
+        > input {
+            clip: rect(1px, 1px, 1px, 1px);
+            clip-path: inset(50%);
+            height: 1px;
+            width: 1px;
+            margin: -1px;
+            overflow: hidden;
+            padding: 0;
+            position: absolute;
+            
+            &:nth-of-type(6):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -500%; }
+            &:nth-of-type(5):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -400%; }
+            &:nth-of-type(4):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -300%; }
+            &:nth-of-type(3):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -200%; }
+            &:nth-of-type(2):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: -100%; }
+            &:nth-of-type(1):checked ~ .carousel__slides .carousel__slide:first-of-type { margin-left: 0%; }
+            
+            &:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+            &:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+            &:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+            &:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+            &:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+            &:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6) { box-shadow: 0px 0px 0px 5px rgba(0,0,255,0.5); }
+        }
+    }
+    
+    .carousel__slides {
+        position: relative;
+        z-index: 1;
+        padding: 0;
+        margin: 0;
+        overflow: hidden;
+        white-space: nowrap;
+        box-sizing: border-box;
+        display: flex;
+    }
+    
+    .carousel__slide {
+        position: relative;
+        display: block;
+        flex: 1 0 100%;
+        width: 100%;
+        height: 100%;
+        overflow: hidden;
+        transition: all 300ms ease-out;
+        vertical-align: top;
+        box-sizing: border-box;
+        white-space: normal;
+        margin-bottom: 20px;
+        
+        figure {
+            display: flex;
+            margin: 0;
+        }
+        
+        div {
+            @include aspect-ratio(3, 2);
+            width: 100%;
+        }
+        
+        img {
+            display: block;
+            flex: 1 1 auto;
+            object-fit: cover;
+        }
+        
+        figcaption {
+            align-self: flex-end;
+            padding: 20px 20px 0 20px;
+            flex: 0 0 auto;
+            width: 25%;
+            min-width: 150px;
+            color: #7D7D87;
+            font-size: 14px; 
+        }
+        
+        .credit {
+            margin-top: 1rem;
+            color: #7D7D87;
+            display: block;
+            font-size: 14px;        
+        }
+        
+        &.scrollable {
+            overflow-y: scroll;
+        }
+    }
+    
+    .carousel__thumbnails {
+        list-style: none;
+        padding: 0;
+        margin: 0;
+        display: flex;
+        
+        margin: 0 -10px;
+        
+        .carousel__slides + & {
+            margin-top: 20px;
+        }
+        
+        li {        
+            flex: 1 1 auto;
+            max-width: calc((100% / 6) - 20px);  
+            margin: 0 10px;
+            transition: all 300ms ease-in-out;
+        }
+        
+        label {
+            display: block;
+            @include aspect-ratio(1,1);
+            
+                      
+            &:hover,
+            &:focus {
+                cursor: pointer;
+                
+                img {
+                    box-shadow: 0px 0px 0px 1px rgba(0,0,0,0.25);
+                    transition: all 300ms ease-in-out;
+                }
+            }
+        }
+        
+        img {
+            display: block;
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }
+    }
+    .carousel > input:nth-of-type(1):checked ~ .carousel__thumbnails li:nth-of-type(1){
+       box-shadow: 0 0 0 5px #ccc;
+    }
+    .carousel > input:nth-of-type(2):checked ~ .carousel__thumbnails li:nth-of-type(2){
+        box-shadow: 0 0 0 5px #ccc;
+    }
+    .carousel > input:nth-of-type(3):checked ~ .carousel__thumbnails li:nth-of-type(3){
+        box-shadow: 0 0 0 5px #ccc;
+    }
+    .carousel > input:nth-of-type(4):checked ~ .carousel__thumbnails li:nth-of-type(4){
+        box-shadow: 0 0 0 5px #ccc;
+    }
+    .carousel > input:nth-of-type(5):checked ~ .carousel__thumbnails li:nth-of-type(5){
+        box-shadow: 0 0 0 5px #ccc;
+    }
+    .carousel > input:nth-of-type(6):checked ~ .carousel__thumbnails li:nth-of-type(6){
+        box-shadow: 0 0 0 5px #ccc;
+    }
+    p{
+        color: #ccc;
+    }
+}
+
+/*************FIN FOTOGRAFIA*****************/
+
+
 /*************RESPONSIVE*****************/
 @media (max-width: 768px){  
  //menu
@@ -362,7 +553,6 @@ footer{
     width: 100%;
     z-index: 100000000000;
     background:#141517;
-}
 
 ul#menu {
 	display: none;
@@ -370,7 +560,6 @@ ul#menu {
 	li a {
 		width: 100%;
 		display: block;
-		//background-color: $blue;
 		color: #fff;
 		font-size: 1.0em;
 		padding: 1.5em 1.6em;
@@ -392,7 +581,7 @@ ul#menu {
 	transition:.25s ease-in-out;
 }
 .hidden {
-//	opacity:0;
+	opacity:0;
 }
 .rot45deg {
 	transform:rotate(45deg);
@@ -422,6 +611,33 @@ ul.hamburger {
 	margin:1.2em 1.6em;
 	height:30px;
 	cursor: pointer;
+        }
+    }
+
+    #perfil{
+        .flex-perfil{
+            flex-direction: column;
+        }
+        .perfil-cont{
+            width: 100%;
+            &:nth-child(2){
+                width: 100%;
+            }
+        }
+    }
+    
+    #detalle{
+        @include paddingSeccion;
+       // height: 100vh;
+        .flex-detalle{
+            flex-direction: column;
+        }
+        .detalle-cont{
+            width: 100%;
+        }
+        .detalle-cont:nth-child(2){
+            width: 100%;
+        }
     }
 }
 
@@ -446,32 +662,9 @@ h2{
         line-height: 2em;
       }
 }
-#perfil{
-    .flex-perfil{
-        flex-direction: column;
-    }
-    .perfil-cont{
-        width: 100%;
-        &:nth-child(2){
-            width: 100%;
-        }
-    }
-} 
+ 
 #proyectos{
     @include paddingSeccion;
-}
-#detalle{
-    @include paddingSeccion;
-   // height: 100vh;
-    .flex-detalle{
-        flex-direction: column;
-    }
-    .detalle-cont{
-        width: 100%;
-    }
-    .detalle-cont:nth-child(2){
-        width: 100%;
-    }
 }
 footer{
    // position: relative;
