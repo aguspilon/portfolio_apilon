@@ -6,7 +6,7 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/1.png"); 
         $("#nombreProyecto").html("Ballet");
         $("#nombreMateria").html("Fotografía");
-        $("#descripcionProyecto").html("Sesion de fotos que realice en taller de fotografía insporado en la vida de una niña apasionada por el ballete");
+        $("#descripcionProyecto").html("Sesion de fotos que realice en taller de fotografía inspirado en la vida de una niña apasionada por el ballet");
         $("#entrar").html("Entrar");
         
         //pongo el nombre 1

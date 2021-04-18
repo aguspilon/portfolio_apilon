@@ -8,10 +8,10 @@
     width: 35%;
 }
 @mixin paddingSeccion{
-    padding: 30% 0 8% 0;
+    padding: 7em 0 5em 0;
 }
 @mixin paddingDesk{
-    padding: 8% 0 8% 0;
+    padding: 5em 0 5em 0;
 }
 /**************mixin*****************/
 
@@ -48,7 +48,7 @@ body{
 }
 /**************estilos generales*****************/
 h1{
-    font-size: 60px;
+    font-size: 50px;
     font-family: "AnticDidone-Regular";
     color: #f5f5f5;
 }
@@ -86,8 +86,17 @@ ul li{
     padding: 10px 20px;
     color: #fff;
     background-color: #d81159;
-    border-color: #d81159;
+    border: 1px solid #d81159;
     border-radius: 0;
+    &:hover{
+        background-color: transparent;
+        border: 1px solid #d81159;
+        color: #d81159;
+        transition: 0.3s;
+    }
+    &:focus{
+        outline: none;
+    }
 }
 /**************menu principal*****************/
 /*nav*/
@@ -147,8 +156,8 @@ ul li{
 
 /**************INICIO*****************/
 #inicio{
-    // background-image:url('../img/img-6bb.png');
-    // background-size: cover;
+     background-image:url('../img/img-6bbb.png');
+     background-size: cover;
      height: 100vh;
      background-color: #000;
      display: flex;
@@ -197,14 +206,17 @@ ul li{
         @include flex;
     }
     .perfil-cont{
-        @include width;
+        width: 30%;
+        &:nth-child(2){
+            @include width;
+        }
         p{
             color: #ccc;
         }
     }
     figure{
       //  position: relative;
-      background-image:url('../img/img-avatar.jpg');
+      background-image:url('../img/avatar2.png');
       background-size: cover;
       height: 480px;
       &:hover{
@@ -320,15 +332,19 @@ ul li{
 /**************FOOTER*****************/
 footer{
     background: #141517;
-    border-top: 1px solid #7D7D87;
-    padding-top: 20px;
+    border-top: 0.5px solid #7D7D87;
     position: absolute;
     bottom: 0;
     width: 100%;
+    height: 60px;
     p{
         color: #7D7D87;
         text-align: center;
         font-size: 12px;
+        margin-bottom: 0;
+        &:nth-child(1){
+           padding: 10px 0 5px 0;
+        }
     }
 }
 
@@ -376,7 +392,7 @@ ul#menu {
 	transition:.25s ease-in-out;
 }
 .hidden {
-	opacity:0;
+//	opacity:0;
 }
 .rot45deg {
 	transform:rotate(45deg);
@@ -421,6 +437,9 @@ h2{
     display: block;
     text-align: center;
 }
+.border-left{
+    display: none;
+}
 #inicio{
     .ml12 {
         font-size: 20px;
@@ -433,6 +452,9 @@ h2{
     }
     .perfil-cont{
         width: 100%;
+        &:nth-child(2){
+            width: 100%;
+        }
     }
 } 
 #proyectos{
@@ -440,7 +462,7 @@ h2{
 }
 #detalle{
     @include paddingSeccion;
-    height: 100vh;
+   // height: 100vh;
     .flex-detalle{
         flex-direction: column;
     }
@@ -452,7 +474,7 @@ h2{
     }
 }
 footer{
-    position: relative;
+   // position: relative;
     }     
 }
 
