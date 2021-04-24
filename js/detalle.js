@@ -15,11 +15,12 @@ $(document).ready(function () {
     }else
 
     if (id == 2) { //si es el proyecto2
-        $("#img-proyecto").attr("src" , "img/1.png"); 
-        $("#nombreProyecto").html("Diverso");
-        $("#nombreMateria").html("Imagen Corporativa Web");
-        $("#descripcionProyecto").html("Identidad de marca");
+        $("#img-proyecto").attr("src" , "img/2.png"); 
+        $("#nombreProyecto").html("Rediseño");
+        $("#nombreMateria").html("Tipografía");
+        $("#descripcionProyecto").html("Rediseño de perfil y vinos con tipografía");
         $("#entrar").html("Entrar");
+        $('#entrar').attr('href', "tipografia.html");
     }else
 
     if (id == 4) { //si es el proyecto3

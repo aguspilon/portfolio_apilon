@@ -7,25 +7,25 @@
 }
 
 @font-face {
-  font-family: "Nunito-Regular";
-  src: url(../fonts/Nunito-Regular.ttf);
+  font-family: "NunitoSans-Regular";
+  src: url(../fonts/NunitoSans-Regular.ttf);
 }
 
 @font-face {
-  font-family: "Nunito-Light";
-  src: url(../fonts/Nunito-Light.ttf);
+  font-family: "NunitoSans-Light";
+  src: url(../fonts/NunitoSans-Light.ttf);
 }
 
 @font-face {
-  font-family: "Nunito-Bold";
-  src: url(../fonts/Nunito-Bold.ttf);
+  font-family: "NunitoSans-Bold";
+  src: url(../fonts/NunitoSans-Bold.ttf);
 }
 
 /**************font*****************/
 * {
   padding: 0;
   margin: 0;
-  font-family: "Nunito-Regular";
+  font-family: "NunitoSans-Regular";
 }
 
 html {
@@ -41,12 +41,13 @@ body {
 h1 {
   font-size: 50px;
   font-family: "AnticDidone-Regular";
-  color: #ccc;
+  color: #f7f7f7;
 }
 
 h2 {
   font-size: 30px;
   font-family: "AnticDidone-Regular";
+  color: #f7f7f7;
 }
 
 h3 {
@@ -55,13 +56,13 @@ h3 {
 
 h4 {
   font-size: 18px;
-  font-family: "Nunito-Regular";
-  color: #7D7D87;
+  font-family: "NunitoSans-Light";
+  color: #ADADAD;
 }
 
 p {
   font-size: 14px;
-  font-family: "Nunito-Regular";
+  font-family: "NunitoSans-Regular";
   color: #ccc;
 }
 
@@ -70,7 +71,7 @@ p {
   bottom: 50%;
   left: 30px;
   height: 85px;
-  border-left: 1px solid #7D7D87 !important;
+  border-left: 1px solid #ADADAD !important;
 }
 
 ul li {
@@ -79,7 +80,7 @@ ul li {
 
 .btn {
   padding: 10px 20px;
-  color: #fff;
+  color: #f7f7f7;
   background-color: #d81159;
   border: 1px solid #d81159;
   border-radius: 0;
@@ -102,8 +103,7 @@ ul li {
 /**************menu principal*****************/
 /*nav*/
 .menuPrincipal {
-  height: 60px;
-  background: #141517;
+  height: 55px;
   display: block;
   overflow: hidden;
   position: fixed;
@@ -122,7 +122,7 @@ ul li {
 
 .menuPrincipal .menu a {
   position: relative;
-  color: #7D7D87;
+  color: #ADADAD;
   text-decoration: none;
   margin: 0 20px;
 }
@@ -157,7 +157,7 @@ ul li {
 }
 
 .menuPrincipal ul .active {
-  color: #ccc;
+  color: #f7f7f7;
 }
 
 .menu-responsive {
@@ -179,7 +179,7 @@ ul li {
 }
 
 #inicio .ml12 {
-  font-size: 1.8em;
+  font-size: 1.5em;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.5em;
@@ -201,7 +201,7 @@ ul li {
   position: absolute;
   width: 50px;
   height: 1px;
-  background: #7D7D87;
+  background: #ADADAD;
   top: 16px;
   left: 1rem;
 }
@@ -217,7 +217,8 @@ ul li {
 }
 
 #perfil ul li a {
-  margin-right: 20px;
+  margin-right: 16px;
+  font-size: 13px;
   text-decoration: none;
   color: #ccc;
 }
@@ -298,14 +299,14 @@ ul li {
   position: absolute;
   content: "";
   height: 1px;
-  background-color: #7D7D87;
+  background-color: #ADADAD;
   width: 50%;
   margin-left: 15px;
   top: 50%;
 }
 
 #proyectos span {
-  background: #7D7D87;
+  background: #ADADAD;
 }
 
 #proyectos h2 {
@@ -313,7 +314,7 @@ ul li {
 }
 
 #proyectos p {
-  color: #7D7D87;
+  color: #ADADAD;
 }
 
 #proyectos img {
@@ -397,7 +398,6 @@ ul li {
 
 /**************FOOTER*****************/
 footer {
-  background: #141517;
   border-top: 0.5px solid #7D7D87;
   position: absolute;
   bottom: 0;
@@ -425,6 +425,10 @@ footer p:nth-child(1) {
   max-width: 1044px;
   margin: 0 auto;
   padding: 0 15px;
+}
+
+#fotografia .galeria .container {
+  padding: 0 !important;
 }
 
 #fotografia .carousel {
@@ -579,13 +583,13 @@ footer p:nth-child(1) {
           flex: 0 0 auto;
   width: 25%;
   min-width: 150px;
-  color: #7D7D87;
+  color: #ADADAD;
   font-size: 14px;
 }
 
 #fotografia .carousel__slide .credit {
   margin-top: 1rem;
-  color: #7D7D87;
+  color: #ADADAD;
   display: block;
   font-size: 14px;
 }
@@ -690,6 +694,35 @@ footer p:nth-child(1) {
 }
 
 /*************FIN FOTOGRAFIA*****************/
+/*************TIPOGRAFIA*****************/
+#tipografia {
+  padding: 5em 0 5em 0;
+}
+
+#tipografia .cont-tipografia {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#tipografia .cont-tipografia figure {
+  width: 40%;
+}
+
+#tipografia .cont-tipografia figure:nth-child(1) {
+  margin-right: 10px;
+}
+
+#tipografia .cont-tipografia figure img {
+  width: 100%;
+}
+
+/*************FIN TIPOGRAFIA*****************/
 /*************RESPONSIVE*****************/
 @media (max-width: 768px) {
   .menuPrincipal {
@@ -789,11 +822,23 @@ footer p:nth-child(1) {
   #fotografia .carousel__slide figcaption {
     display: none;
   }
+  #tipografia {
+    padding: 7em 0 5em 0;
+  }
+  #tipografia .cont-tipografia {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #tipografia .cont-tipografia figure {
+    width: 100%;
+  }
 }
 
 @media (max-width: 575px) {
   h1 {
-    font-size: 50px;
+    font-size: 40px;
   }
   h2 {
     font-size: 26px;
