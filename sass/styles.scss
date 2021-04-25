@@ -552,7 +552,7 @@ footer{
 
 /*************TIPOGRAFIA*****************/
 #tipografia{
-    @include paddingDesk;
+    @include flexCenter;
     .cont-tipografia{
         @include flex;
         figure{
@@ -562,6 +562,11 @@ footer{
             }
             img{
                 width: 100%;
+            }
+            figcaption{
+                color:#ccc;
+                font-size: 14px;
+                margin-top: 0.5rem;
             }
         }
     }
@@ -658,7 +663,7 @@ ul.hamburger {
     }
     
     #detalle{
-        @include paddingSeccion;
+        //@include paddingSeccion;
        // height: 100vh;
         .flex-detalle{
             flex-direction: column;

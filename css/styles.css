@@ -696,7 +696,16 @@ footer p:nth-child(1) {
 /*************FIN FOTOGRAFIA*****************/
 /*************TIPOGRAFIA*****************/
 #tipografia {
-  padding: 5em 0 5em 0;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
 }
 
 #tipografia .cont-tipografia {
@@ -720,6 +729,12 @@ footer p:nth-child(1) {
 
 #tipografia .cont-tipografia figure img {
   width: 100%;
+}
+
+#tipografia .cont-tipografia figure figcaption {
+  color: #ccc;
+  font-size: 14px;
+  margin-top: 0.5rem;
 }
 
 /*************FIN TIPOGRAFIA*****************/
@@ -803,9 +818,6 @@ footer p:nth-child(1) {
   }
   #perfil .perfil-cont:nth-child(2) {
     width: 100%;
-  }
-  #detalle {
-    padding: 7em 0 5em 0;
   }
   #detalle .flex-detalle {
     -webkit-box-orient: vertical;
