@@ -49,7 +49,7 @@ $(document).ready(function () {
         $("#nombreMateria").html("Brochure");
         $("#descripcionProyecto").html("Freelance: Brochure diseñado para la agencia de marketing digital y producción audiovisual Roma Digital. ");
         $("#entrar").html("Entrar");
-        $('#entrar').attr('href', "#");
+        $('#entrar').attr('href',  "roma.html");
 		
 	}
 

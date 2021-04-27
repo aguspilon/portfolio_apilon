@@ -8,9 +8,6 @@
     width: 35%;
 }
 @mixin paddingSeccion{
-    padding: 7em 0 5em 0;
-}
-@mixin paddingDesk{
     padding: 5em 0 5em 0;
 }
 @mixin flexCenter{
@@ -163,7 +160,7 @@ ul li{
 /**************INICIO*****************/
 #inicio{
      background-image:url('../img/img-6bbb.png');
-     background-size: cover;
+     //background-size: cover;
      height: 100vh;
      background-color: #000;
      display: flex;
@@ -202,7 +199,7 @@ ul li{
 
 /**************PERFIL*****************/
 #perfil{
-    @include paddingDesk;
+    @include paddingSeccion();
     ul li a{
         margin-right: 16px;
         font-size: 13px;
@@ -245,7 +242,7 @@ ul li{
 /**************PROYECYOS*****************/
 #proyectos{
     background: #000;
-    @include paddingDesk;
+    @include paddingSeccion;
     .flex-cont{
         width: 100%;
         @include flex;
@@ -319,7 +316,7 @@ ul li{
 
 /**************DETALLE*****************/
 #detalle{
-  // @include paddingDesk;
+   @include paddingSeccion;
    @include flexCenter;
     .flex-detalle{
         @include flex;
@@ -381,7 +378,7 @@ footer{
   
   // Styling
 #fotografia{
-    @include paddingDesk;
+    @include paddingSeccion;
     .galeria{
         max-width: 1044px;
         margin: 0 auto;
@@ -574,6 +571,68 @@ footer{
 
 /*************FIN TIPOGRAFIA*****************/
 
+/*************ROMA*****************/
+
+#roma{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    height: 100vh;
+    #wrapper {
+        width: 100%;
+        max-width: 964px;
+        position: relative;
+        #carousel {
+            overflow: auto;
+            scroll-behavior: smooth;
+            scrollbar-width: none;
+              
+        #content {
+            display: grid;
+            grid-gap: 16px;
+            grid-auto-flow: column;
+            margin: auto;
+            box-sizing: border-box;
+            .item {
+                width: 250px;
+                }
+            }
+        }
+        #carousel::-webkit-scrollbar {
+            height: 0;
+        }
+    }
+    #prev,
+    #next {
+      display: flex;
+      justify-content: center;
+      align-content: center;
+      background: white;
+      border: none;
+      padding: 8px;
+      border-radius: 50%;
+      outline: 0;
+      cursor: pointer;
+      position: absolute;
+    }
+    
+    #prev {
+      top: 50%;
+      left: 0;
+      transform: translate(50%, -50%);
+      display: none;
+    }
+    
+    #next {
+      top: 50%;
+      right: 0;
+      transform: translate(-50%, -50%);
+    }
+}
+/*************FIN ROMA*****************/ 
+
+
 
 /*************RESPONSIVE*****************/
 @media (max-width: 768px){  
@@ -663,8 +722,7 @@ ul.hamburger {
     }
     
     #detalle{
-        //@include paddingSeccion;
-       // height: 100vh;
+         height: auto;
         .flex-detalle{
             flex-direction: column;
         }
@@ -683,6 +741,7 @@ ul.hamburger {
     }
     #tipografia{
         @include paddingSeccion;
+        height: auto;
         .cont-tipografia{
             flex-direction: column;
             figure{
@@ -712,14 +771,19 @@ h2{
         font-size: 20px;
         line-height: 2em;
       }
+    }
 }
+
+
+
+
+  
+
+  
  
-#proyectos{
-    @include paddingSeccion;
-}
-footer{
-   // position: relative;
-    }     
-}
+  
 
-
+  
+ 
+  
+  

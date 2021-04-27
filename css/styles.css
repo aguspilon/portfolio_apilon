@@ -167,7 +167,6 @@ ul li {
 /**************INICIO*****************/
 #inicio {
   background-image: url("../img/img-6bbb.png");
-  background-size: cover;
   height: 100vh;
   background-color: #000;
   display: -webkit-box;
@@ -357,6 +356,7 @@ ul li {
 
 /**************DETALLE*****************/
 #detalle {
+  padding: 5em 0 5em 0;
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
@@ -738,6 +738,89 @@ footer p:nth-child(1) {
 }
 
 /*************FIN TIPOGRAFIA*****************/
+/*************ROMA*****************/
+#roma {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-orient: vertical;
+  -webkit-box-direction: normal;
+      -ms-flex-direction: column;
+          flex-direction: column;
+  height: 100vh;
+}
+
+#roma #wrapper {
+  width: 100%;
+  max-width: 964px;
+  position: relative;
+}
+
+#roma #wrapper #carousel {
+  overflow: auto;
+  scroll-behavior: smooth;
+  scrollbar-width: none;
+}
+
+#roma #wrapper #carousel #content {
+  display: -ms-grid;
+  display: grid;
+  grid-gap: 16px;
+  grid-auto-flow: column;
+  margin: auto;
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+#roma #wrapper #carousel #content .item {
+  width: 250px;
+}
+
+#roma #wrapper #carousel::-webkit-scrollbar {
+  height: 0;
+}
+
+#roma #prev,
+#roma #next {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -ms-flex-line-pack: center;
+      align-content: center;
+  background: white;
+  border: none;
+  padding: 8px;
+  border-radius: 50%;
+  outline: 0;
+  cursor: pointer;
+  position: absolute;
+}
+
+#roma #prev {
+  top: 50%;
+  left: 0;
+  -webkit-transform: translate(50%, -50%);
+          transform: translate(50%, -50%);
+  display: none;
+}
+
+#roma #next {
+  top: 50%;
+  right: 0;
+  -webkit-transform: translate(-50%, -50%);
+          transform: translate(-50%, -50%);
+}
+
+/*************FIN ROMA*****************/
 /*************RESPONSIVE*****************/
 @media (max-width: 768px) {
   .menuPrincipal {
@@ -819,6 +902,9 @@ footer p:nth-child(1) {
   #perfil .perfil-cont:nth-child(2) {
     width: 100%;
   }
+  #detalle {
+    height: auto;
+  }
   #detalle .flex-detalle {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -835,7 +921,8 @@ footer p:nth-child(1) {
     display: none;
   }
   #tipografia {
-    padding: 7em 0 5em 0;
+    padding: 5em 0 5em 0;
+    height: auto;
   }
   #tipografia .cont-tipografia {
     -webkit-box-orient: vertical;
@@ -865,9 +952,6 @@ footer p:nth-child(1) {
   #inicio .ml12 {
     font-size: 20px;
     line-height: 2em;
-  }
-  #proyectos {
-    padding: 7em 0 5em 0;
   }
 }
 /*# sourceMappingURL=styles.css.map */
