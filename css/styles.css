@@ -61,7 +61,7 @@ h4 {
 }
 
 p {
-  font-size: 14px;
+  font-size: 16px;
   font-family: "NunitoSans-Regular";
   color: #ccc;
 }
@@ -98,6 +98,16 @@ ul li {
   outline: none !important;
   -webkit-box-shadow: 0 0 0 0rem;
           box-shadow: 0 0 0 0rem;
+}
+
+.block-link {
+  margin-top: 15px;
+}
+
+.block-link a {
+  color: #ccc;
+  font-size: 13px;
+  text-decoration: none;
 }
 
 /**************menu principal*****************/
@@ -166,7 +176,7 @@ ul li {
 
 /**************INICIO*****************/
 #inicio {
-  background-image: url("../img/img-6bbb.png");
+  background-image: url("../img/background.png");
   height: 100vh;
   background-color: #000;
   display: -webkit-box;
@@ -285,8 +295,18 @@ ul li {
   width: 23%;
 }
 
+#proyectos .flex-cont .proyecto-cont a {
+  text-decoration: none;
+}
+
 #proyectos h2 {
   color: #f7f7f7;
+}
+
+#proyectos h2:hover {
+  opacity: 50%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #proyectos .item-proyecto {
@@ -905,6 +925,9 @@ footer p:nth-child(1) {
   #detalle {
     height: auto;
   }
+  #detalle h1 {
+    padding-top: 20px;
+  }
   #detalle .flex-detalle {
     -webkit-box-orient: vertical;
     -webkit-box-direction: normal;
@@ -913,6 +936,9 @@ footer p:nth-child(1) {
   }
   #detalle .detalle-cont {
     width: 100%;
+  }
+  #detalle .detalle-cont p {
+    margin-top: 1.2rem;
   }
   #detalle .detalle-cont:nth-child(2) {
     width: 100%;

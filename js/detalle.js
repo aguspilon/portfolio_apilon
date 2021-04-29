@@ -6,8 +6,8 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/1.png"); 
         $("#nombreProyecto").html("Ballet");
         $("#nombreMateria").html("Fotografía Digital");
-        $("#descripcionProyecto").html("Sesión de fotos que realice en taller de fotografía, inspirado en la vida de una niña apasionada por el ballet.  La sesión de fotos cuenta con seis fotografías en diferentes planos, relatando la bella vida de una niña practicando lo que más le gusta, el ballet.");
-        $("#entrar").html("Entrar");
+        $("#descripcionProyecto").html("Sesión de fotos que realice en taller de fotografía, inspirada en la vida de una niña apasionada por el ballet. ");
+        $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "ballet.html");
         
         //pongo el nombre 1
@@ -19,7 +19,7 @@ $(document).ready(function () {
         $("#nombreProyecto").html("Rediseño");
         $("#nombreMateria").html("Tipografía");
         $("#descripcionProyecto").html("En primer lugar tuve el desafío de diseñar tres etiquetas de vino con nombres de tipografías. Por otro lado la tarea también consiste en realizar un perfil el cual debía crear un curriculum y tarjeta personal.");
-        $("#entrar").html("Entrar");
+        $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "tipografia.html");
     }else
 
@@ -27,8 +27,8 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/4.png"); 
         $("#nombreProyecto").html("Green House");
         $("#nombreMateria").html("Pogramación web 2");
-        $("#descripcionProyecto").html("Green house es un sitio web maquetado en PHP y conjuntamente diseñado en la materia Interfaces Digitales. En primer lugar Green House muestra el producto con funciones de filtración, buscador y catalogo. Luego tenemos un administrador, el cual puede agregar y eliminar datos.");
-        $("#entrar").html("Entrar");
+        $("#descripcionProyecto").html("Green house es un sitio web programado en PHP y diseñado en la materia Interfaces Digitales. En primer lugar Green House exhibe el producto con un catalogo, para luego ingresar al administrador, el cual permite agregar y filtrar datos.");
+        $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "https://apilon.000webhostapp.com/index.php");
 		
 	}else
@@ -38,7 +38,7 @@ $(document).ready(function () {
         $("#nombreProyecto").html("Bodegas Fripp");
         $("#nombreMateria").html("Proyecto Web");
         $("#descripcionProyecto").html("Sitio web de Bodegas Fripp, diseñado y maquetado en proyecto web, utilizando html, sass, JQuery. Mi desafío fue emprender la búsqueda de una empresa que aun no cuente con sitio web, hacer una investigación de la marca, diseñar y maquetar uno.");
-        $("#entrar").html("Entrar");
+        $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "http://proyectovinosfripp.epizy.com/vinos.html");
 		
 	}else
@@ -48,10 +48,21 @@ $(document).ready(function () {
         $("#nombreProyecto").html("Roma Digital");
         $("#nombreMateria").html("Brochure");
         $("#descripcionProyecto").html("Freelance: Brochure diseñado para la agencia de marketing digital y producción audiovisual Roma Digital. ");
-        $("#entrar").html("Entrar");
+        $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href',  "roma.html");
 		
+	}else
+
+    if (id == 5) { //si es el proyecto5
+        $("#img-proyecto").attr("src" , "img/5.png"); 
+        $("#nombreProyecto").html("Tarter Beer");
+        $("#nombreMateria").html("Interfaces Digitales");
+        $("#descripcionProyecto").html("lorem ipsum solor");
+        $("#entrar").html("Ver Proyecto");
+        $('#entrar').attr('href',  "tarter.html");
+		
 	}
+
 
 
 

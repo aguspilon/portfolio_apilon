@@ -70,7 +70,7 @@ h4{
 }
 
 p{
-    font-size: 14px;
+    font-size: 16px;
     font-family: "NunitoSans-Regular";
     color: #ccc;
 }
@@ -100,6 +100,14 @@ ul li{
         outline: none!important;
         box-shadow: 0 0 0 0rem ;
     }
+}
+.block-link{
+    margin-top: 15px;
+    a{
+        color: #ccc;
+        font-size: 13px;
+        text-decoration: none;
+    } 
 }
 /**************menu principal*****************/
 /*nav*/
@@ -159,7 +167,7 @@ ul li{
 
 /**************INICIO*****************/
 #inicio{
-     background-image:url('../img/img-6bbb.png');
+     background-image:url('../img/background.png');
      //background-size: cover;
      height: 100vh;
      background-color: #000;
@@ -248,11 +256,18 @@ ul li{
         @include flex;
         margin-bottom: 25px;
         .proyecto-cont{
-            width: 23%;   
+            width: 23%;  
+            a{
+                text-decoration: none;
+            } 
         }
     }
     h2{
         color: #f7f7f7;
+        &:hover{
+            opacity: 50%;
+            transition: 0.3s;
+        }
     }
     .item-proyecto{
         position: relative;
@@ -316,6 +331,11 @@ ul li{
 
 /**************DETALLE*****************/
 #detalle{
+  //  background-image:url('../img/img-back.png');
+   // background-repeat: no-repeat;
+  //  background-repeat: no-repeat;
+  //  background-attachment: fixed;
+  //  background-position: center;   
    @include paddingSeccion;
    @include flexCenter;
     .flex-detalle{
@@ -723,11 +743,17 @@ ul.hamburger {
     
     #detalle{
          height: auto;
+         h1{
+             padding-top: 20px;
+         }
         .flex-detalle{
             flex-direction: column;
         }
         .detalle-cont{
             width: 100%;
+            p{
+                margin-top: 1.2rem;
+            }
         }
         .detalle-cont:nth-child(2){
             width: 100%;
