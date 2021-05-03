@@ -16,9 +16,9 @@ $(document).ready(function () {
 
     if (id == 2) { //si es el proyecto2
         $("#img-proyecto").attr("src" , "img/2.png"); 
-        $("#nombreProyecto").html("Rediseño");
+        $("#nombreProyecto").html("Diseño");
         $("#nombreMateria").html("Tipografía");
-        $("#descripcionProyecto").html("En primer lugar tuve el desafío de diseñar tres etiquetas de vino con nombres de tipografías. Por otro lado la tarea también consiste en realizar un perfil el cual debía crear un curriculum y tarjeta personal.");
+        $("#descripcionProyecto").html("En primer lugar tuve el desafío de diseñar tres etiquetas de vino con nombres de tipografías. También, por otro lado diseñe mi perfil, el cual cuenta con curriculum y tarjeta personal.");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "tipografia.html");
     }else
@@ -27,7 +27,7 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/4.png"); 
         $("#nombreProyecto").html("Green House");
         $("#nombreMateria").html("Pogramación web 2");
-        $("#descripcionProyecto").html("Green house es un sitio web programado en PHP y diseñado en la materia Interfaces Digitales. En primer lugar Green House exhibe el producto con un catalogo, para luego ingresar al administrador, el cual permite agregar y filtrar datos.");
+        $("#descripcionProyecto").html("Green House es una web programada en PHP y diseñado en la materia Interfaces Digitales. Este sitio cuenta con un catalogo de plantas y un administrador, el cual permite agregar, eliminar y filtrar datos.");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "https://apilon.000webhostapp.com/index.php");
 		
@@ -37,7 +37,7 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/7.png"); 
         $("#nombreProyecto").html("Bodegas Fripp");
         $("#nombreMateria").html("Proyecto Web");
-        $("#descripcionProyecto").html("Sitio web de Bodegas Fripp, diseñado y maquetado en proyecto web, utilizando html, sass, JQuery. Mi desafío fue emprender la búsqueda de una empresa que aun no cuente con sitio web, hacer una investigación de la marca, diseñar y maquetar uno.");
+        $("#descripcionProyecto").html("Diseño y desarrollo de sitio web de la empresa de vinos Bodegas Fripp.");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "http://proyectovinosfripp.epizy.com/vinos.html");
 		
@@ -57,7 +57,7 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/5.png"); 
         $("#nombreProyecto").html("Tarter Beer");
         $("#nombreMateria").html("Interfaces Digitales");
-        $("#descripcionProyecto").html("lorem ipsum solor");
+        $("#descripcionProyecto").html("Totem de cerveza artesanal");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href',  "tarter.html");
 		

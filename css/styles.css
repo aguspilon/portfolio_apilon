@@ -90,8 +90,8 @@ ul li {
   background-color: transparent;
   border: 1px solid #d81159;
   color: #d81159;
-  -webkit-transition: 0.5s;
-  transition: 0.5s;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 .btn:focus {
@@ -101,7 +101,7 @@ ul li {
 }
 
 .block-link {
-  margin-top: 15px;
+  margin-top: 2rem;
 }
 
 .block-link a {
@@ -191,7 +191,7 @@ ul li {
   font-size: 1.5em;
   text-align: center;
   text-transform: uppercase;
-  letter-spacing: 0.5em;
+  letter-spacing: 0.7em;
 }
 
 #inicio .ml12 .letter {
@@ -218,6 +218,12 @@ ul li {
 .cont-redes img {
   width: 18px;
   margin-right: 0.5rem;
+}
+
+.cont-redes img:hover {
+  opacity: 60%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 /**************PERFIL*****************/
@@ -304,7 +310,7 @@ ul li {
 }
 
 #proyectos h2:hover {
-  opacity: 50%;
+  opacity: 60%;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -386,7 +392,6 @@ ul li {
   -webkit-box-pack: center;
       -ms-flex-pack: center;
           justify-content: center;
-  height: 100vh;
 }
 
 #detalle .flex-detalle {
@@ -976,8 +981,9 @@ footer p:nth-child(1) {
     display: none;
   }
   #inicio .ml12 {
-    font-size: 20px;
+    font-size: 21px;
     line-height: 2em;
+    letter-spacing: 0.5em;
   }
 }
 /*# sourceMappingURL=styles.css.map */
