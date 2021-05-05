@@ -211,7 +211,9 @@ ul li{
 
 /**************PERFIL*****************/
 #perfil{
-    @include paddingSeccion();
+    @include flexCenter;
+    @include paddingSeccion;
+    height: 100vh;
     ul li a{
         margin-right: 16px;
         font-size: 13px;
@@ -231,22 +233,23 @@ ul li{
         }
     }
     figure{
-      //  position: relative;
+       // position: relative;
       background-image:url('../img/avatar2.png');
       background-size: cover;
-      height: 480px;
+      height: 440px;
       &:hover{
-        background-image:url('../img/img-perfil.png'); 
-        transition: opacity 1.5s ease-in-out;
+        background-image:url('../img/hover.png'); 
+        transition: 0.5s;
+       // transition: opacity 1.5s ease-in-out;
       }
         img{
             width: 100%;
            // position: absolute;
           //  left: 0;
-           // transition: opacity 1.5s ease-in-out;
+         //   transition: opacity 1.5s ease-in-out;
         }
         img.top:hover {
-          //  opacity: 0;
+         //  opacity: 0;
         }
     } 
 }
@@ -342,6 +345,7 @@ ul li{
   //  background-position: center;   
    @include paddingSeccion;
    @include flexCenter;
+   height: 100vh;
     .flex-detalle{
         @include flex;
     }
@@ -352,6 +356,11 @@ ul li{
         }
         img{
             width: 100%;
+            &:hover{
+                background-image:url('../img/hover.png'); 
+                transition: 0.5s;
+               // transition: opacity 1.5s ease-in-out;
+              }
         }
         p{
             color: #ccc;
@@ -606,7 +615,8 @@ footer{
     height: 100vh;
     #wrapper {
         width: 100%;
-        max-width: 964px;
+       // max-width: 964px;
+        max-width: 1100px;
         position: relative;
         #carousel {
             overflow: auto;
@@ -620,7 +630,8 @@ footer{
             margin: auto;
             box-sizing: border-box;
             .item {
-                width: 250px;
+               // width: 250px;
+               width: 300px;
                 }
             }
         }
@@ -803,8 +814,9 @@ h2{
         letter-spacing: 0.5em;
       }
     }
+#perfil{
+    height: auto;
+    }
 }
-
-
 
 
