@@ -39,14 +39,14 @@ body {
 
 /**************estilos generales*****************/
 h1 {
-  font-size: 50px;
-  font-family: "AnticDidone-Regular";
+  font-size: 40px;
+  font-family: "NunitoSans-Regular";
   color: #f7f7f7;
 }
 
 h2 {
   font-size: 30px;
-  font-family: "AnticDidone-Regular";
+  font-family: "NunitoSans-Regular";
   color: #f7f7f7;
 }
 
@@ -56,14 +56,15 @@ h3 {
 
 h4 {
   font-size: 18px;
-  font-family: "NunitoSans-Light";
+  font-family: "AnticDidone-Regular";
   color: #ADADAD;
 }
 
 p {
   font-size: 16px;
   font-family: "NunitoSans-Regular";
-  color: #ccc;
+  color: #f7f7f7;
+  line-height: 1.6em;
 }
 
 .border-left {
@@ -82,14 +83,15 @@ ul li {
   padding: 10px 20px;
   color: #f7f7f7;
   background-color: #d81159;
-  border: 1px solid #d81159;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
   border-radius: 0;
 }
 
 .btn:hover {
-  background-color: transparent;
-  border: 1px solid #d81159;
-  color: #d81159;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  color: #f7f7f7;
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -102,12 +104,21 @@ ul li {
 
 .block-link {
   margin-top: 2rem;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
 }
 
 .block-link a {
   color: #ccc;
   font-size: 13px;
   text-decoration: none;
+}
+
+.block-link:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 /**************menu principal*****************/
@@ -177,6 +188,7 @@ ul li {
 /**************INICIO*****************/
 #inicio {
   background-image: url("../img/background.png");
+  background-repeat: no-repeat;
   height: 100vh;
   background-color: #000;
   display: -webkit-box;
@@ -188,7 +200,7 @@ ul li {
 }
 
 #inicio .ml12 {
-  font-size: 1.5em;
+  font-size: 2em;
   text-align: center;
   text-transform: uppercase;
   letter-spacing: 0.7em;
@@ -198,6 +210,20 @@ ul li {
   display: inline-block;
   line-height: 1em;
   color: #fff;
+}
+
+#inicio .ml13 {
+  margin-top: 2em;
+  font-size: 1em;
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.7em;
+}
+
+#inicio .ml13 .letter {
+  display: inline-block;
+  line-height: 1em;
+  color: #ADADAD;
 }
 
 .cont-redes {
@@ -218,10 +244,13 @@ ul li {
 .cont-redes img {
   width: 18px;
   margin-right: 0.5rem;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
 }
 
 .cont-redes img:hover {
-  opacity: 60%;
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
   -webkit-transition: 0.3s;
   transition: 0.3s;
 }
@@ -315,10 +344,6 @@ ul li {
   text-decoration: none;
 }
 
-#proyectos h2 {
-  color: #f7f7f7;
-}
-
 #proyectos h2:hover {
   opacity: 60%;
   -webkit-transition: 0.3s;
@@ -344,12 +369,15 @@ ul li {
   background: #ADADAD;
 }
 
-#proyectos h2 {
+#proyectos h3 {
   color: #f7f7f7;
+  font-family: "AnticDidone-Regular";
 }
 
-#proyectos p {
-  color: #ADADAD;
+#proyectos h3:hover {
+  opacity: 60%;
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #proyectos img {
@@ -774,8 +802,8 @@ footer p:nth-child(1) {
 }
 
 #tipografia .cont-tipografia figure figcaption {
-  color: #ccc;
-  font-size: 14px;
+  color: #f7f7f7;
+  font-size: 16px;
   margin-top: 0.5rem;
 }
 
@@ -821,7 +849,7 @@ footer p:nth-child(1) {
 }
 
 #roma #wrapper #carousel #content .item {
-  width: 300px;
+  width: 330px;
 }
 
 #roma #wrapper #carousel::-webkit-scrollbar {
@@ -981,6 +1009,9 @@ footer p:nth-child(1) {
   #tipografia .cont-tipografia figure {
     width: 100%;
   }
+  #roma #wrapper #carousel #content .item {
+    width: 300px;
+  }
 }
 
 @media (max-width: 575px) {
@@ -1000,6 +1031,9 @@ footer p:nth-child(1) {
   #inicio .ml12 {
     font-size: 21px;
     line-height: 2em;
+    letter-spacing: 0.5em;
+  }
+  #inicio .ml13 {
     letter-spacing: 0.5em;
   }
   #perfil {
