@@ -23,7 +23,7 @@ $(document).ready(function () {
         $('#entrar').attr('href', "tipografia.html");
     }else
 
-    if (id == 4) { //si es el proyecto3
+    if (id == 3) { //si es el proyecto3
         $("#img-proyecto").attr("src" , "img/4.png"); 
         $("#nombreProyecto").html("Green House");
         $("#nombreMateria").html("Pogramación web 2");
@@ -33,7 +33,7 @@ $(document).ready(function () {
 		
 	}else
 
-    if (id == 7) { //si es el proyecto4
+    if (id == 5) { //si es el proyecto4
         $("#img-proyecto").attr("src" , "img/7.png"); 
         $("#nombreProyecto").html("Bodegas Fripp");
         $("#nombreMateria").html("Proyecto Web");
@@ -43,7 +43,7 @@ $(document).ready(function () {
 		
 	}else
 
-    if (id == 8) { //si es el proyecto4
+    if (id == 6) { //si es el proyecto4
         $("#img-proyecto").attr("src" , "img/8.png"); 
         $("#nombreProyecto").html("Roma Digital");
         $("#nombreMateria").html("Brochure");
@@ -53,7 +53,7 @@ $(document).ready(function () {
 		
 	}else
 
-    if (id == 5) { //si es el proyecto5
+    if (id == 4) { //si es el proyecto5
         $("#img-proyecto").attr("src" , "img/5.png"); 
         $("#nombreProyecto").html("Tarter Beer");
         $("#nombreMateria").html("Interfaces Digitales");
@@ -62,13 +62,6 @@ $(document).ready(function () {
         $('#entrar').attr('href',  "tarter.html");
 		
 	}
-
-
-
-
-
-
-
 
 
 

@@ -64,3 +64,10 @@ prev.addEventListener("click", e => {
 let width = carousel.offsetWidth;
 window.addEventListener("resize", e => (width = carousel.offsetWidth));
 
+
+
+///////////////////////Modal con imagenes tarter beer roma digital/////////////////
+function onClick(element) {
+	document.getElementById("img01").src = element.src;
+	document.getElementById("modal01").style.display = "block";
+  }

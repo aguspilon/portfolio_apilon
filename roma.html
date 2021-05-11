@@ -9,7 +9,7 @@
     <!--STYLES-->
     <link rel="stylesheet" href="css/bootstrap.min.css">
     <link rel="stylesheet" href="css/styles.css">
-
+    <link rel="icon" href="img/favicon.svg" type="image/svg" sizes="16x16">
 </head>
 
 <body>
@@ -46,19 +46,40 @@
     </nav>
     <!--menu responsive-->
 
-    <!--BALLETE-->
+    <!--ROMA-->
 
     <section id="roma">
         <div id="wrapper">
             <div id="carousel">
                 <div id="content">
-                    <img class="item" src="img/roma/r1.png" />
-                    <img src="img/roma/r2.png" class="item" />
-                    <img src="img/roma/r3.png" class="item" />
-                    <img src="img/roma/r4.png" class="item" />
-                    <img src="img/roma/r5.png" class="item" />
-                    <img src="img/roma/r6.png" class="item" />
-                    <img src="img/roma/r7.png" class="item" />
+                    <figure>
+                        <img class="item" src="img/roma/r1.png"  onclick="onClick(this)" class="modal-hover-opacity" />
+                    </figure>
+                   
+                    <figure>
+                        <img src="img/roma/r2.png" class="item"  onclick="onClick(this)" class="modal-hover-opacity"/>
+                    </figure>
+                    
+                    <figure>
+                        <img src="img/roma/r3.png" class="item"  onclick="onClick(this)" class="modal-hover-opacity" />
+                    </figure>
+                    
+                    <figure>
+                        <img src="img/roma/r4.png" class="item"  onclick="onClick(this)" class="modal-hover-opacity"/>
+                    </figure>
+                    
+                    <figure>
+                        <img src="img/roma/r5.png" class="item"  onclick="onClick(this)" class="modal-hover-opacity"/>
+                    </figure>
+                   
+                    <figure>
+                        <img src="img/roma/r6.png" class="item"  onclick="onClick(this)" class="modal-hover-opacity"/>
+                    </figure>
+                   
+                    <figure>
+                        <img src="img/roma/r7.png" class="item"  onclick="onClick(this)" class="modal-hover-opacity"/>
+                    </figure>
+                   
                 </div>
             </div>
             <button id="prev">
@@ -70,9 +91,14 @@
         </div>
         <script src="app.js"></script>
 
-         <!-- modal -->
-    
-         <!-- modal -->
+        <!-- modal -->
+        <div id="modal01" class="modal" onclick="this.style.display='none'">
+            <span class="close">&times;&nbsp;&nbsp;&nbsp;&nbsp;</span>
+            <div class="modal-content">
+              <img id="img01">
+            </div>
+          </div>
+        <!-- modal -->
 
         <div class="container">
             <div class="row">
@@ -85,7 +111,7 @@
             </div>
         </div>
     </section>
-    <!--BALLETE-->
+    <!--ROMA-->
 
 
 
