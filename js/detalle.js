@@ -6,7 +6,7 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/1a.png"); 
         $("#nombreProyecto").html("Ballet");
         $("#nombreMateria").html("Fotografía Digital");
-        $("#descripcionProyecto").html("Sesión de fotos que realice en taller de fotografía, inspirada en la vida de una niña apasionada por el ballet. ");
+        $("#descripcionProyecto").html("Sesión de fotos presentadas en el Taller de fotografía. La secuencia está inspirada en la vida de una niña apasionada por el ballet.");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "ballet.html");
         
@@ -18,7 +18,7 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/2.png"); 
         $("#nombreProyecto").html("Diseño");
         $("#nombreMateria").html("Tipografía");
-        $("#descripcionProyecto").html("En primer lugar tuve el desafío de diseñar tres etiquetas de vino con nombres de tipografías. También, por otro lado diseñe mi perfil, el cual cuenta con curriculum y tarjeta personal.");
+        $("#descripcionProyecto").html("Tuve el desafío de diseñar etiquetas de vino con nombres de tipografías. También diseñé mi perfil; con currículum y tarjeta personal.");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "tipografia.html");
     }else
@@ -27,7 +27,7 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/4.png"); 
         $("#nombreProyecto").html("Green House");
         $("#nombreMateria").html("Pogramación web 2");
-        $("#descripcionProyecto").html("Green House es una web programada en PHP y diseñado en la materia Interfaces Digitales. Este sitio cuenta con un catalogo de plantas y un administrador, el cual permite agregar, eliminar y filtrar datos.");
+        $("#descripcionProyecto").html("- Green House es una web programada en PHP y diseñada en la materia Interfaces Digitales. Este sitio cuenta con un catálogo de plantas y un administrador que permite agregar, eliminar y filtrar datos.");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "https://apilon.000webhostapp.com/index.php");
 		
@@ -43,7 +43,7 @@ $(document).ready(function () {
 		
 	}else
 
-    if (id == 6) { //si es el proyecto4
+    if (id == 7) { //si es el proyecto4
         $("#img-proyecto").attr("src" , "img/8.png"); 
         $("#nombreProyecto").html("Roma Digital");
         $("#nombreMateria").html("Brochure");
@@ -57,9 +57,19 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/5.png"); 
         $("#nombreProyecto").html("Tarter Beer");
         $("#nombreMateria").html("Interfaces Digitales");
-        $("#descripcionProyecto").html("Totem de cerveza artesanal");
+        $("#descripcionProyecto").html("Tótem de cerveza artesanal. Desarrollé un tótem digital que permite comprar cervezas en un bar. El objetivo es que el usuario pueda gestionar su compra en una cervecería sin tener que esperar ser atendido en una barra.");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href',  "tarter.html");
+		
+	}else
+
+    if (id == 6) { //si es el proyecto5
+        $("#img-proyecto").attr("src" , "img/6.png"); 
+        $("#nombreProyecto").html("App");
+        $("#nombreMateria").html("Interfaces Digitales");
+        $("#descripcionProyecto").html("book Zone es una aplicación que ofrece acceso a libros, tareas, exámenes y demás recursos digitales a estudiantes y docentes uruguayos. Es promovida y gestionada por instituciones educativas. Parte de su compromiso es brindar acceso a información y recursos relacionados a diversas áreas.");
+        $("#entrar").html("Ver Proyecto");
+        $('#entrar').attr('href',  "app.html");
 		
 	}
 

@@ -113,6 +113,7 @@ ul li{
         transition: 0.3s;
     }
 }
+
 /**************menu principal*****************/
 /*nav*/
 .menuPrincipal{
@@ -204,29 +205,30 @@ ul li{
         line-height: 1em;
         color: #ADADAD;
    }
+   .cont-redes{
+    position: absolute;
+    bottom: 5%;
+    padding-left: 5rem;
+     span{
+         position: absolute;
+         width: 50px;
+         height: 1px;
+         background:#ADADAD;
+         top: 16px;
+         left: 1rem;
+     }
+     img{
+         width: 18px;
+         margin-right: 0.5rem;
+         transition: all ease 0.4s;
+         &:hover{
+             transform: translateY(-2px);
+             transition: 0.3s;
+         }
+     }
  }
- .cont-redes{
-   position: absolute;
-   bottom: 5%;
-   padding-left: 5rem;
-    span{
-        position: absolute;
-        width: 50px;
-        height: 1px;
-        background:#ADADAD;
-        top: 16px;
-        left: 1rem;
-    }
-    img{
-        width: 18px;
-        margin-right: 0.5rem;
-        transition: all ease 0.4s;
-        &:hover{
-            transform: translateY(-2px);
-            transition: 0.3s;
-        }
-    }
 }
+
 
 /**************PERFIL*****************/
 #perfil{
@@ -388,6 +390,34 @@ footer{
         margin-bottom: 0;
         &:nth-child(1){
            padding: 10px 0 5px 0;
+        }
+    }
+    .footer-flex{
+        display: flex;
+        justify-content: space-between;
+        .cont-footer{
+            width: 35%;
+            .logo-footer{
+                width: 70px;
+                min-height: 50px;
+            }
+            .redes{
+                text-align: right;
+                margin-top: 1em;
+                img{
+                    width: 14px;
+                    margin-right: 0.5rem;
+                    transition: all ease 0.4s;
+                    min-height: 25px;
+                    &:hover{
+                        transform: translateY(-2px);
+                        transition: 0.3s;
+                    }
+                }
+            }
+            a{
+                color: #7D7D87;
+            }
         }
     }
 }
@@ -636,7 +666,6 @@ footer{
             margin: auto;
             box-sizing: border-box;
             .item {
-               // width: 250px;
                width: 330px;
                 }
             }
@@ -731,6 +760,26 @@ footer{
     }
 }
 /*************FIN ROMA*****************/ 
+
+/*************APP*****************/
+#app{
+    @include flexCenter;
+    height: 100vh;
+    .cont-app{
+        @include flex;
+        .flex-app{
+            width: 35%;
+            img{
+                width: 100%;
+            }
+            video{
+                width: 320px;
+                height: 400px;
+            }
+        }
+    }
+}
+/*************FIN APP*****************/
 
 
 /*************RESPONSIVE*****************/
@@ -879,7 +928,13 @@ ul.hamburger {
             right: 0;
         }
     } 
-
+    #app{
+        .cont-app{
+            .flex-app{
+                width: 45%;
+            }
+        } 
+    } 
 }
 
 /// Extra small devices (portrait phones, less than 576px)
@@ -910,6 +965,16 @@ h2{
 #perfil{
     height: auto;
     }
+#app{
+    .cont-app{
+        .flex-app{
+            width: 100%;
+            video{
+                width: 100%;
+                }
+            } 
+        } 
+    } 
 }
 
 
