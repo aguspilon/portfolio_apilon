@@ -33,7 +33,7 @@ $(document).ready(function () {
 		
 	}else
 
-    if (id == 5) { //si es el proyecto4
+    if (id == 6) { //si es el proyecto4
         $("#img-proyecto").attr("src" , "img/7.png"); 
         $("#nombreProyecto").html("Bodegas Fripp");
         $("#nombreMateria").html("Proyecto Web");
@@ -63,13 +63,23 @@ $(document).ready(function () {
 		
 	}else
 
-    if (id == 6) { //si es el proyecto5
+    if (id == 5) { //si es el proyecto5
         $("#img-proyecto").attr("src" , "img/6.png"); 
         $("#nombreProyecto").html("App");
         $("#nombreMateria").html("Interfaces Digitales");
         $("#descripcionProyecto").html("book Zone es una aplicación que ofrece acceso a libros, tareas, exámenes y demás recursos digitales a estudiantes y docentes uruguayos. Es promovida y gestionada por instituciones educativas. Parte de su compromiso es brindar acceso a información y recursos relacionados a diversas áreas.");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href',  "app.html");
+		
+	}else
+
+    if (id == 8) { //si es el proyecto5
+        $("#img-proyecto").attr("src" , "img/9.png"); 
+        $("#nombreProyecto").html("MINI cooper");
+        $("#nombreMateria").html("Proyecto personal");
+        $("#descripcionProyecto").html("Diseño de OnePage en version desktop y mobile");
+        $("#entrar").html("Ver Proyecto");
+        $('#entrar').attr('href',  "minicooper.html");
 		
 	}
 

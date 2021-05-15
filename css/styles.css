@@ -188,6 +188,7 @@ ul li {
 /**************INICIO*****************/
 #inicio {
   background-image: url("../img/background.png");
+  background-size: cover;
   background-repeat: no-repeat;
   height: 100vh;
   background-color: #000;
@@ -832,14 +833,24 @@ footer .footer-flex .cont-footer a {
 
 #tipografia .cont-tipografia figure {
   width: 40%;
+  margin-right: 10px;
 }
 
-#tipografia .cont-tipografia figure:nth-child(1) {
-  margin-right: 10px;
+#tipografia .cont-tipografia figure:nth-child(3) {
+  margin-right: 0px;
 }
 
 #tipografia .cont-tipografia figure img {
   width: 100%;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+#tipografia .cont-tipografia figure img:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
 }
 
 #tipografia .cont-tipografia figure figcaption {
@@ -1029,6 +1040,55 @@ footer .footer-flex .cont-footer a {
 }
 
 /*************FIN APP*****************/
+/*************minicooper*****************/
+#minicooper {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  height: 100vh;
+}
+
+#minicooper .contFlex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -ms-flex-wrap: nowrap;
+      flex-wrap: nowrap;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+}
+
+#minicooper .contFlex figure {
+  width: 40%;
+}
+
+#minicooper .contFlex figure figcaption {
+  color: #f7f7f7;
+  font-size: 16px;
+  margin-top: 0.5rem;
+}
+
+#minicooper .contFlex figure img {
+  width: 100%;
+  -webkit-transition: all ease 0.4s;
+  transition: all ease 0.4s;
+}
+
+#minicooper .contFlex figure img:hover {
+  -webkit-transform: translateY(-2px);
+          transform: translateY(-2px);
+  -webkit-transition: 0.3s;
+  transition: 0.3s;
+}
+
+/*************FIN minicooper*****************/
 /*************RESPONSIVE*****************/
 @media (max-width: 768px) {
   .menuPrincipal {
@@ -1114,6 +1174,9 @@ footer .footer-flex .cont-footer a {
   #perfil .perfil-cont:nth-child(2) {
     width: 100%;
   }
+  #perfil .perfil-cont figure {
+    height: 600px;
+  }
   #detalle {
     height: auto;
   }
@@ -1167,6 +1230,19 @@ footer .footer-flex .cont-footer a {
   #app .cont-app .flex-app {
     width: 45%;
   }
+  #minicooper {
+    padding: 5em 0 5em 0;
+    height: auto;
+  }
+  #minicooper .contFlex {
+    -webkit-box-orient: vertical;
+    -webkit-box-direction: normal;
+        -ms-flex-direction: column;
+            flex-direction: column;
+  }
+  #minicooper .contFlex figure {
+    width: 100%;
+  }
 }
 
 @media (max-width: 575px) {
@@ -1193,6 +1269,9 @@ footer .footer-flex .cont-footer a {
   }
   #perfil {
     height: auto;
+  }
+  #perfil .perfil-cont figure {
+    height: 440px;
   }
   #app .cont-app .flex-app {
     width: 100%;
