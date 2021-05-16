@@ -27,7 +27,7 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/4.png"); 
         $("#nombreProyecto").html("Green House");
         $("#nombreMateria").html("Pogramación web 2");
-        $("#descripcionProyecto").html("- Green House es una web programada en PHP y diseñada en la materia Interfaces Digitales. Este sitio cuenta con un catálogo de plantas y un administrador que permite agregar, eliminar y filtrar datos.");
+        $("#descripcionProyecto").html("Green House es una web programada en PHP y diseñada en la materia Interfaces Digitales. Este sitio cuenta con un catálogo de plantas y un administrador que permite agregar, eliminar y filtrar datos.");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href', "https://apilon.000webhostapp.com/index.php");
 		
@@ -43,7 +43,7 @@ $(document).ready(function () {
 		
 	}else
 
-    if (id == 7) { //si es el proyecto4
+    if (id == 8) { //si es el proyecto4
         $("#img-proyecto").attr("src" , "img/8.png"); 
         $("#nombreProyecto").html("Roma Digital");
         $("#nombreMateria").html("Brochure");
@@ -67,13 +67,13 @@ $(document).ready(function () {
         $("#img-proyecto").attr("src" , "img/6.png"); 
         $("#nombreProyecto").html("App");
         $("#nombreMateria").html("Interfaces Digitales");
-        $("#descripcionProyecto").html("book Zone es una aplicación que ofrece acceso a libros, tareas, exámenes y demás recursos digitales a estudiantes y docentes uruguayos. Es promovida y gestionada por instituciones educativas. Parte de su compromiso es brindar acceso a información y recursos relacionados a diversas áreas.");
+        $("#descripcionProyecto").html("Book zone es una aplicación que ofrece acceso a libros, tareas, exámenes y demás recursos digitales a estudiantes y docentes uruguayos. Es promovida y gestionada por instituciones educativas. Parte de su compromiso es brindar acceso a información y recursos relacionados a diversas áreas.");
         $("#entrar").html("Ver Proyecto");
         $('#entrar').attr('href',  "app.html");
 		
 	}else
 
-    if (id == 8) { //si es el proyecto5
+    if (id == 7) { //si es el proyecto5
         $("#img-proyecto").attr("src" , "img/9.png"); 
         $("#nombreProyecto").html("MINI cooper");
         $("#nombreMateria").html("Proyecto personal");
