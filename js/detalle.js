@@ -3,7 +3,7 @@ $(document).ready(function () {
     const id = urlParams.get('id');
 
     if (id == 1) { //si es proyecto 1
-        $("#img-proyecto").attr("src" , "img/1a.png"); 
+        $("#img-proyecto").attr("src" , "img/1.png"); 
         $("#nombreProyecto").html("Ballet");
         $("#nombreMateria").html("Fotografía Digital");
         $("#descripcionProyecto").html("Sesión de fotos presentadas en el Taller de fotografía. La secuencia está inspirada en la vida de una niña apasionada por el ballet.");
